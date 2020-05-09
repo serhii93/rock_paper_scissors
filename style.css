@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  background-color: rgb(39, 41, 68);
+  font-family: sans-serif;
+}
+
+.score {
+  color: rgb(212, 212, 212);
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-score h2 {
+  text-shadow: 3px 3px 6px rgba(40, 224, 40, 0.76),
+    3px -3px 6px rgba(40, 224, 40, 0.76);
+}
+
+.computer-score h2 {
+  text-shadow: 3px 3px 6px rgba(206, 59, 33, 0.76),
+    3px -3px 6px rgba(201, 48, 21, 0.856);
+}
+
+.score h2 {
+  font-size: 1.7rem;
+}
+.score p {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0.3rem;
+}
+
+.intro {
+  color: rgb(212, 212, 212);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.6s ease;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-top: -7rem;
+}
+
+.intro button,
+.match button {
+  width: 150px;
+  height: 60px;
+  background: none;
+  border: none;
+  color: rgb(212, 212, 212);
+  font-size: 1.5rem;
+  background-color: rgb(45, 117, 96);
+  box-shadow: 3px 3px 6px rgba(40, 224, 40, 0.76),
+    -3px 3px 6px rgba(40, 224, 40, 0.76), 3px -3px 6px rgba(40, 224, 40, 0.76),
+    -3px -3px 6px rgba(40, 224, 40, 0.76);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.intro button:hover,
+.match button:hover {
+}
+
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.6s ease 0.5s;
+}
+
+.winner {
+  color: rgb(212, 212, 212);
+  text-align: center;
+  font-size: 45px;
+  font-weight: normal;
+  margin-top: 2rem;
+}
+
+.hands,
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.computer-hand {
+  margin: 0 0 0 3rem;
+}
+
+.player-hand {
+  transform: rotateY(180deg);
+  margin: 0 3rem 0 0;
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateY(-30px);
+  }
+  25% {
+    transform: rotateY(180deg) translate(0px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(-30px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  65% {
+    transform: rotateY(180deg) translateY(-30px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  85% {
+    transform: rotateY(180deg) translateY(-30px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-30px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-30px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
